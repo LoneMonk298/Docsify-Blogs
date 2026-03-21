@@ -448,61 +448,14 @@ window.$docsify = {
 > [!TIP] 需要Node.js环境
 > [详情请查看官方文档](https://github.com/meff34/docsify-to-pdf-converter)
 
-17. docsify PDF预览 <br>
+17. docsify PDF预览（该插件已失效） <br>
 > https://github.com/lazypanda10117/docsify-pdf-embed
 
 ```js
-<!-- jsDelivr -->
-  <script src="//gcore.jsdelivr.net/npm/pdfobject@2.2.8/pdfobject.min.js"></script>
-  
-  <script src="//gcore.jsdelivr.net/npm/docsify-pdf-embed-plugin/src/docsify-pdf-embed.js"></script>
+<!-- 使用如下命令进行替换实现同样效果 -->
+<embed src="./你的文件.pdf" type="application/pdf" width="100%" height="600px">
 
-<!-- 配置 --> 
-<script>
-window.$docsify = {
-markdown: {
-        renderer: {
-           code: function(code, lang) {
-               if(lang === 'pdf'){
-                var renderer_func = function(code, lang, base=null) { 
-	var pdf_renderer = function(code, lang, verify) {
-		function unique_id_generator(){
-			function rand_gen(){
-				return Math.floor((Math.random()+1) * 65536).toString(16).substring(1);
-			}
-			return rand_gen() + rand_gen() + '-' + rand_gen() + '-' + rand_gen() + '-' + rand_gen() + '-' + rand_gen() + rand_gen() + rand_gen();
-		}
-		if(lang && !lang.localeCompare('pdf', 'en', {sensitivity: 'base'})){
-			if(verify){
-				return true;
-			}else{
-				var divId = "markdown_code_pdf_container_" + unique_id_generator().toString();
-				var container_list = new Array();
-				if(localStorage.getItem('pdf_container_list')){
-					container_list = JSON.parse(localStorage.getItem('pdf_container_list'));	
-				}
-				container_list.push({"pdf_location": code, "div_id": divId});
-				localStorage.setItem('pdf_container_list', JSON.stringify(container_list));
-				return (
-					'<div style="margin-top:'+ PDF_MARGIN_TOP +'; margin-bottom:'+ PDF_MARGIN_BOTTOM +';" id="'+ divId +'">'
-						+ '<a href="'+ code + '"> Link </a> to ' + code +
-					'</div>'
-				);
-			} 
-		}
-		return false;
-	}
-	if(pdf_renderer(code, lang, true)){
-	   return pdf_renderer(code, lang, false);
-	}
-	return (base ? base : this.origin.code.apply(this, arguments));
-                    }
-               }
-           }
-        }
-    }
-}
-</script>
+<iframe src="./你的文件.pdf" width="100%" height="600px"></iframe>
 ```
 
 18. docsify 明暗主题切换 <br>
