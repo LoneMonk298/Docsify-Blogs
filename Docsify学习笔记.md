@@ -573,4 +573,19 @@ window.$docsify = {
    
    ![alt text](./img/7.png) <br>
 
-5. 将docsify生成的文件上传到仓库中 <br>
+5. 将docsify生成的文件上传到仓库中，建议全部放在根目录下，不要放在子目录 <br>
+   
+   ![alt text](./img/8.png) <br>
+
+   上传后的目录如下： <br>
+
+   ![alt text](./img/8-1.png) <br>
+   
+
+6. 通过GitHub Pages进行托管，点击设置，下滑选择Pages进行配置<br>
+   
+   ![alt text](./img/9.png) <br>
+
+7. 点击Save进行保存，刷新几遍就可以看到网站地址，即可完成托管到GitHub Pages上线
+
+   ![alt text](./img/10.png)
