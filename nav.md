@@ -1,7 +1,7 @@
 
 <div id="container" class="layui-container">
     <div class="nav">
-        <a v-for="(item,index) in nodes" :href="aHref(item)">{{item.moduleName}}</a>
+        <a v-for="(item,index) in nodes"  @click="goToAnchor(item)" href="javascript:void(0)">{{item.moduleName}}</a>
     </div>
     <fieldset class="layui-elem-field" style="padding: 8px;" v-for="(item,index) in nodes">
         <a :id="item.moduleId" style="position: relative;top:-50px;"></a>
@@ -196,15 +196,21 @@
                 };
             },
             methods: {
-                aHref(v){
-                    return "?id=" + v.moduleId;
-                },
-                theName(v){
-                    return v.split('@')[0];
-                },
-                theHref(v){
-                    return v.split('@')[1];
+               goToAnchor(item) {
+                const el = document.getElementById(item.moduleId);
+                if (el) {
+                el.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
                 }
+            },
+            theName(v) {
+                return v.split('@')[0];
+            },
+            theHref(v) {
+                return v.split('@')[1];
+            }
             }
         });
         importLayuiCss();
