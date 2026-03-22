@@ -221,7 +221,7 @@
 
     function importLayuiRowCss(){
         var hm = document.createElement("link");
-        hm.href = "layui-row.css";
+        hm.href = "./css/layui-row.css";
         hm.rel = "stylesheet";
         var s = document.getElementsByTagName("link")[0]; 
         s.parentNode.insertBefore(hm, s);
