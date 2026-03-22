@@ -453,9 +453,14 @@ window.$docsify = {
 
 ```js
 <!-- 使用如下命令进行替换实现同样效果 -->
-<embed src="./你的文件.pdf" type="application/pdf" width="100%" height="600px">
-
-<iframe src="./你的文件.pdf" width="100%" height="600px"></iframe>
+<iframe 
+  src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https%3A%2F%2FZhouGuo298.github.io%2FDocsify-Blogs%2Fimg%2Fredeme.pdf"
+  width="100%" 
+  height="600px"
+  style="border:none; border-radius:8px;"
+>
+</iframe>
+// 暂时没有想到其它好的方案
 ```
 
 18. docsify 明暗主题切换 <br>
@@ -510,6 +515,33 @@ window.$docsify = {
     crossChapterText: true, // 显示跨章节文本
   },
 }
+```
+
+20. docsify 顶部横幅 <br>
+> https://github.com/Plugin-contrib/docsify-plugin/tree/master/packages/docsify-top-banner-plugin
+
+```js
+<!-- Head -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-top-banner-plugin@latest/dist/style.css">
+
+<!-- Body -->
+<script src="https://cdn.jsdelivr.net/npm/docsify-top-banner-plugin@latest/dist/index.js"></script>
+
+<!-- 配置 -->
+window.$docsify = {
+    topBanner: {
+        content: '这是内容必须单行不能为空',
+        defaultTag: 'span', // 默认标签用以渲染
+        position: 'top', // 位置默认固定
+        backgroundColor: '#42b983', // 背景颜色
+        zIndex: 99, // 优先级，默认为99
+        textColor: '#a0abe7ff', // 文本颜色
+        linkColor: '#a0abe7ff', // 标签颜色
+        textAlign: 'center', // 文本对齐方式
+        fontSize: '14px'// 文本大小
+  },
+}
+
 ```
 
 ## 部署上线

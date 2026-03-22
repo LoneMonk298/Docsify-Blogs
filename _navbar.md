@@ -6,4 +6,5 @@
 - [归档](/archive)
 - [关于](/about)
 - [留言板](/message)
-- [友情链接](/links)
+
+- [个人主页](https://zgg.leleosd.top)
