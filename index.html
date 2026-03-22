@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="renderer" content="webkit">
+  <link rel="icon" href="./img/liuhua.ico">
   <link rel="stylesheet" title="light" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
   <link rel="stylesheet" title="dark" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
   <link rel="stylesheet" href="https://unpkg.com/docsify-plugin-toc@1.3.1/dist/light.css">
@@ -28,65 +30,7 @@
       .app-nav a:hover {
           color: #64ffda !important;
       }
-
-      @media (max-width: 768px) {
-          .app-nav {
-            font-size: 13px !important; /* 手机字体缩小 */
-            padding: 6px 8px !important;
-            margin-top: -5px !important;
-            justify-content: center !important;
-            gap: 6px !important;
-          }
-          .app-nav a {
-            margin: 4px 8px !important;
-          }
-        }
       
-        /* 汉堡菜单容器 */
-      .nav-wrapper {
-        position: relative;
-        width: 100%;
-      }
-
-      /* 汉堡按钮（默认隐藏，手机端显示） */
-      .hamburger-btn {
-        display: none;
-        background: transparent;
-        border: none;
-        color: #5674a8;
-        font-size: 22px;
-        cursor: pointer;
-      }
-
-      /* 手机端显示汉堡按钮，隐藏导航链接 */
-      @media (max-width: 768px) {
-        .hamburger-btn {
-          display: block;
-          margin: 0 auto;
-        }
-        .nav-links {
-          display: none;
-          position: absolute;
-          top: 100%;
-          left: 0;
-          right: 0;
-          background: #f8f9fa;
-          flex-direction: column;
-          padding: 10px 0;
-          border-radius: 8px;
-          box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        .nav-links.active {
-          display: flex !important;
-        }
-        .nav-links a {
-          margin: 8px 20px !important;
-          padding: 8px 0;
-          border-bottom: 1px solid #e9ecef;
-        }
-      }
-    
-
   </style>
 
 
@@ -95,13 +39,19 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: '',
-      repo: '',
+    name: 'Docsify在线笔记',
+    repo: '',
+    coverpage: false,   // 是否显示封面
+    loadNavbar: true,  // 是否加载导航
+    loadSidebar: true, // 是否加载侧边栏
+    autoHeader: true,  // 是否自动回到顶部
+    onlyCover: false,  // 是否只显示封面
+    routerMode: 'history',// hash或者history
+    maxLevel: 4,       // 侧边栏最大层级
+    subMaxLevel: 4,    // 侧边栏子层级
+    sidebarDisplayLevel: 5, // 侧边栏显示层级
 
-      loadNavbar: true,
-      loadSidebar: true,
-      subMaxLevel: 4,
-
+    // 分页设置
     pagination: {
       previousText: '上一章节', 
       nextText: {            
@@ -109,9 +59,9 @@
       },
       crossChapter: true,     
       crossChapterText: true, 
-  },
+    },
 
-
+    // 字数统计
     count:{
       countable: true,  
       position: 'top',  
@@ -127,15 +77,17 @@
       isExpected: true    
     },
     
+    // 明暗切换
     darkSwitch: {
-        fixed: false, // 是否固定在顶部
-        debug: false, // 是否开启调试模式
+        fixed: false, 
+        debug: false, 
         style: {
             top: '25px',
             right: '60px'
         }
     },
 
+    // 代码复制
     copyCode: {
       buttonText: {
           '/zh-cn/': '点击复制',
@@ -144,58 +96,143 @@
           '/es/': 'Haga clic para copiar',
           '/': 'Copy to clipboard',
       },
-      errorText: {
+    errorText: {
           '/zh-cn/': '错误',
           '/ru/': 'ошибка',
           '/': 'Error',
       },
-      successText: {
+    successText: {
           '/zh-cn/': '复制',
           '/ru/': 'Скопировано',
           '/de-de/': 'Kopiert',
           '/es/': 'Copiado',
           '/': 'Copied',
       },
-  },
-
-    tabs: {
-      persist: true,  
-      sync: true,     
-      abComments: false,  
-      tabHeaders: false  
     },
 
+    // 搜索
+    search: 'auto',
+ 
+    // 页脚信息
+    footer: {
+      copy: '<span>ZG &copy; 2026</span>',
+      auth: 'XXX备xxxxxx号',
+      pre: '',
+      style: 'text-align: center;',
+      class: 'className'
+    },
+
+    // 标签
+    tabs: {
+      persist: true,  
+      sync: true,
+      theme: 'classic',
+      tabComments: true,  
+      tabHeaders: true  
+    },
+
+    
+    // 更新时间
     timeUpdater: {
       text: "<div align='right' width='100%' style='font-size: 16px '>最后更新时间: {docsify-updated} </div>",
       formatUpdated: "{YYYY}/{MM}/{DD}",
       whereToPlace: "bottom",
     },
-
+    
+    // 侧边栏
     toc: {
       tocMaxLevel: 5,
       target: 'h2, h3, h4, h5, h6',
       ignoreHeaders:  ['<!-- {docsify-ignore} -->', '<!-- {docsify-ignore-all} -->']
     },
 
+    // Markdown 渲染
+    markdown: {
+        renderer: {
+          code: function (code, lang) {
+            if (lang === 'drawio') {
+              if (window.drawioConverter) {
+                console.log('drawio 转化中')
+                return window.drawioConverter(code)
+              } else {
+                return `<div class='drawio-code'>${code}</div>`
+              }
+            } else if(lang === 'pdf'){
+              var pdf_renderer = function(code, lang, verify) {
+                  function unique_id_generator(){
+                      function rand_gen(){
+                          return Math.floor((Math.random()+1) * 65536).toString(16).substring(1);
+                      }
+                      return rand_gen() + rand_gen() + '-' + rand_gen() + '-' + rand_gen() + '-' + rand_gen() + '-' + rand_gen() + rand_gen() + rand_gen();
+                  }
+                  if(lang && !lang.localeCompare('pdf', 'en', {sensitivity: 'base'})){
+                      if(verify){
+                          return true;
+                      }else{
+                          var divId = "markdown_code_pdf_container_" + unique_id_generator().toString();
+                          var container_list = new Array();
+                          if(localStorage.getItem('pdf_container_list')){
+                              container_list = JSON.parse(localStorage.getItem('pdf_container_list'));	
+                          }
+                          container_list.push({"pdf_location": code, "div_id": divId});
+                          localStorage.setItem('pdf_container_list', JSON.stringify(container_list));
+                          return (
+                              '<div style="margin-top:'+ PDF_MARGIN_TOP +'; margin-bottom:'+ PDF_MARGIN_BOTTOM +';" id="'+ divId +'">'
+                                  + '<a href="'+ code + '"> Link </a> to ' + code +
+                              '</div>'
+                          );
+                      } 
+                  }
+                  return false;
+              }
+              if(pdf_renderer(code, lang, true)){
+                return pdf_renderer(code, lang, false);
+              }
+            } 
+            else {
+              return this.origin.code.apply(this, arguments);
+            }
+          }
+        }
+      }
 
 }
   </script>
-
-
-  <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- Vue -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>
+  <!-- Docsify -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4.13.0/lib/docsify.js"></script>
+  <!-- docsify Tabs -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+  <!-- docsify 回到顶部 -->
   <script src="https://cdn.jsdelivr.net/gh/Sumsung524/docsify-backTop/dist/docsify-backTop.min.js"></script>
+  <!-- docsify 图片放大 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- docsify 复制代码 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2.1.1/dist/docsify-copy-code.min.js"></script>
+  <!-- docsify 文本提示 -->
   <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+  <!-- docsify 字数统计 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
+  <!-- docsify 更新时间 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.min.js"></script>
+  <!-- docsify 侧边目录 -->
   <script src="https://unpkg.com/docsify-plugin-toc@1.3.1/dist/docsify-plugin-toc.min.js"></script>
+  <!-- 侧边栏扩展与折叠 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <!-- docsify 问答 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-accordion/src/index.js"></script>
+  <!-- docsify 搜索 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- docsify 明暗切换 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-dark-switch/dist/docsify-dark-switch.min.js"></script>
+  <!-- docsify 分页 -->
   <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- 页脚信息 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
+  <!-- docsify pdf embed -->
+  <script src="https://cdn.jsdelivr.net/npm/pdfobject@2.2.8/pdfobject.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/docsify-pdf-embed-plugin/src/docsify-pdf-embed.js"></script>
   <script>
     docsifyBackTop = {
         size: 48,           
@@ -204,26 +241,6 @@
         logo:'<svg t="1774057796896" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="23668" width="64" height="64"><path d="M512 1024A512 512 0 1 1 512 0a512 512 0 0 1 0 1024zM307.2 602.550857v18.505143h47.542857v123.611429h21.577143v-123.611429h47.396571v-18.505143H307.2zM508.854857 599.771429c-21.723429 0-38.838857 6.948571-51.2 21.284571-11.922286 13.531429-17.700571 31.085714-17.700571 52.809143 0 21.504 5.778286 38.985143 17.700571 52.516571 12.361143 13.897143 29.476571 21.138286 51.2 21.138286 21.504 0 38.619429-6.948571 51.2-20.918857 11.922286-13.531429 17.846857-31.085714 17.846857-52.736 0-21.942857-5.924571-39.643429-17.92-52.955429-12.507429-14.189714-29.622857-21.138286-51.2-21.138285z m0 19.090285c15.140571 0 26.843429 4.827429 35.035429 14.774857 7.972571 9.728 12.141714 23.113143 12.141714 40.228572 0 16.896-4.169143 30.208-12.141714 39.789714-8.192 9.728-19.894857 14.774857-35.108572 14.774857a43.593143 43.593143 0 0 1-35.181714-15.140571c-7.972571-9.801143-11.922286-22.893714-11.922286-39.497143 0-16.676571 3.949714-29.842286 11.922286-39.570286 8.338286-10.386286 20.114286-15.36 35.254857-15.36z m96.109714-16.310857v142.189714h21.723429v-55.369142h36.790857c34.084571 0 51.2-14.555429 51.2-43.593143 0-28.891429-16.969143-43.154286-50.761143-43.154286H604.891429z m21.723429 18.505143h35.401143c10.532571 0 18.285714 1.974857 23.332571 5.997714 4.973714 3.584 7.533714 9.947429 7.533715 18.724572s-2.56 15.140571-7.314286 19.090285c-5.046857 4.022857-12.8 5.997714-23.552 5.997715h-35.401143v-49.737143z m38.619429-158.134857a19.675429 19.675429 0 0 0 28.452571 0 20.845714 20.845714 0 0 0 0-28.818286L521.435429 261.778286a20.845714 20.845714 0 0 0-28.818286 0L320.292571 434.102857a20.845714 20.845714 0 0 0 0 28.818286 20.845714 20.845714 0 0 0 28.891429 0l157.988571-157.622857 158.134858 157.622857z" fill="#1296db" opacity=".9" p-id="23669"></path></svg>'    
     };
   </script>
-
-  <script>
-// 等待 Docsify 加载完成后再绑定汉堡菜单
-setTimeout(() => {
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.querySelector('.nav-links');
-
-  if (hamburger && navLinks) {
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-      });
-    });
-  }
-}, 800); // 延迟 800ms 等待导航栏渲染完成
-</script>
 
 </body>
 </html>

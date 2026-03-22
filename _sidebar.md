@@ -4,4 +4,5 @@
   - [Clash Verge 404 解决](clash-verge-404.md)
   - [Docsify 搭建博客](Docsify学习笔记.md)
   - [Ai心理健康助手](前端实训项目.md)
-- 关于我
+- 工具导航
+  - [工具导航](nav.md)

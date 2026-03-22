@@ -415,55 +415,16 @@ window.$docsify = {
 search: 'auto', 
 ```
 
-15. docsify 基于GitHub显示文件共享者 <br>
-```js
-<!-- jsDelivr -->
-<script src="https://gcore.jsdelivr.net/npm/docsify-contributors@latest/dist/index.min.js"></script>
 
-<!-- 配置 -->
-<script>
-window.$docsify = {
-    contributors: {
-        repo: 'https://github.com/youngfish42/note',
-        ignores: []
-        style: {
-            color: '#42b983',
-            bgcolor: '#0a192f'
-        },image: {
-            size: 40,
-            isRound: true,
-            margin: '0.5em'
-        },load: {
-            isOpen: true,
-            color: '#42b983'
-        }
-    }
-}
-</script>
-```
 
-16.  docsify 在线笔记转PDF <br>
+1.   docsify 在线笔记转PDF <br>
 > https://github.com/meff34/docsify-to-pdf-converter
 
 > [!TIP] 需要Node.js环境
 > [详情请查看官方文档](https://github.com/meff34/docsify-to-pdf-converter)
 
-17. docsify PDF预览（该插件已失效） <br>
-> https://github.com/lazypanda10117/docsify-pdf-embed
 
-```js
-<!-- 使用如下命令进行替换实现同样效果 -->
-<iframe 
-  src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https%3A%2F%2FZhouGuo298.github.io%2FDocsify-Blogs%2Fimg%2Fredeme.pdf"
-  width="100%" 
-  height="600px"
-  style="border:none; border-radius:8px;"
->
-</iframe>
-// 暂时没有想到其它好的方案
-```
-
-18. docsify 明暗主题切换 <br>
+17.  docsify 明暗主题切换 <br>
 > https://github.com/markz-demo/docsify-dark-switch
 
 ```js
@@ -495,7 +456,7 @@ window.$docsify = {
 </script>
 ```
 
-19. docsify 文档分页 <br>
+18. docsify 文档分页 <br>
 > https://github.com/imyelo/docsify-pagination?tab=readme-ov-file#readme
 
 ```js
@@ -517,7 +478,7 @@ window.$docsify = {
 }
 ```
 
-20. docsify 顶部横幅 <br>
+19. docsify 顶部横幅 <br>
 > https://github.com/Plugin-contrib/docsify-plugin/tree/master/packages/docsify-top-banner-plugin
 
 ```js
@@ -574,3 +535,4 @@ window.$docsify = {
 7. 点击Save进行保存，刷新几遍就可以看到网站地址，即可完成托管到GitHub Pages上线
 
    ![alt text](./img/10.png)
+
