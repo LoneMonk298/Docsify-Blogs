@@ -24,53 +24,47 @@
                             moduleId: 'my-project',
                             moduleName: '我的项目',
                             parts:[
-                                    '项目资源分布@https://mg.meiflower.top/project/README',
-                                    '我的项目@https://gitee.com/mgang/my-project',
-                                    '猫大刚主页@https://mg.meiflower.top/',
-                                    '我的计划@https://mg.meiflower.top/plan/',
-                                    '我的B站空间@https://space.bilibili.com/1174515315',
-                                    '我的博客@https://mg.meiflower.top/mb/',
-                                    'marp分享@http://marp.meiflower.top/',
-                                    '待办列表@http://todo.meiflower.top/',
-                                    '芒果网盘@http://disk.meiflower.top/',
-                                    '芒果卡片@https://mg.meiflower.top/card-admin/#/login',
-                                    '芒果卡片构建@http://mg.meiflower.top/cp/bqr/',
-                                    '点子队列@http://mg.meiflower.top/cp/keyqueue',
-                                    'mango-kit@https://github.com/mg0324/mango-kit',
-                                    '妙娃miaowa@https://mmtdd.gitee.io/miaowa/#/',
-                                    'Java学习体系文档@https://mg0324.github.io/s-java/#/',
-                                    'CPU修行文档@http://mgang.gitee.io/s-cpu/#/',
-                                    'docsify-template@http://mg0324.github.io/docsify-template/#/',
-                                    'docsify-note@http://mg0324.github.io/docsify-note/#/',
-                                    'B站工具bup@https://gitee.com/mgang/my-project/tree/master/bup',
-                                    'jmedis@https://gitee.com/mangoorg/jmedis',
-                                    'idea启动插件@https://gitee.com/mgang/idea-plugin-start-time',
-                                    '我的分享@https://gitee.com/mgang/my-share',
-                                    'leetcode刷题笔记@https://gitee.com/mgang/leet-code'
+                                '个人主页@https://zgg.leleosd.top/',
+
+
                             ]
                         },
                         {
                             moduleId: 'offen-tool',
                             moduleName: '常用工具',
                             parts:[
-                                'chrome商店@https://chrome.google.com/webstore/category/extensions',
+                                '🍉调整与压缩图片@https://tool.xuecan.net/image-resize/',
                                 '定稿设计@https://gd74865930.qiye.gaoding.com/smartdesign',
                                 '百度统计@https://tongji.baidu.com/main/homepage/22511391/homepage/index',
-                                '图片转base64@https://kz16.top/png2base64.html',
-                                '谷歌翻译@https://translate.google.com.hk/?hl=zh-CN&sourceid=cnhp',
+                                '软件个锤子@https://www.rjgcz.com/',
+                                '无忧软件网@https://www.wycad.com/',
+                                '🔨锤子在线工具网@https://www.toolhelper.cn/Home/Index',
+                                '多媒体在线工具@https://ezgif.com/video-compressor?err=expired',
+                                '在线视频转码@https://video.online-convert.com/convert-to-mp4',
+                                'PDF解密@https://smallpdf.com/cn/unlock-pdf#r=unlock',
+                                '二维码生成器@https://cli.im/',
+                                'Webm to video@https://www.freeconvert.com/mp4-to-webm/download',
+                                'EPUB to MOBI@https://www.freeconvert.com/zh/epub-to-mobi',
                                 'Free DNS@https://dns.he.net/index.cgi',
-                                'processon@https://www.processon.com/login',
-                                'drawio@https://app.diagrams.net/',
+                                'Processon作图@https://www.processon.com/login',
+                                'Drawio作图@https://app.diagrams.net/',
                                 '华为云容器服务@https://console.huaweicloud.com/swr/?agencyId=9fb50aa2b84e4d9f820bb6d32ca2b5ab&region=cn-south-1&locale=zh-cn#/swr/warehouse/detail/hw_008618613073290_01/mangoorg/flask-api/guide',
-                                'doocs md@https://doocs.gitee.io/md/',
-                                'mvnrepository@https://mvnrepository.com/'
+                                'Doocs MD@https://doocs.gitee.io/md/',
+                                'Maven宝库@https://mvnrepository.com/'
                             ]
                         },
                         {
-                            moduleId: 'offen-email',
-                            moduleName: '常用邮箱',
+                            moduleId: 'resource-project',
+                            moduleName: '相关素材',
                             parts:[
-                                'QQ邮箱@https://mail.qq.com/cgi-bin/frame_html?sid=05f9Ec9lbnidJGUG&r=f6adff210c8f5793ce3d74cfcaa93fde&lang=zh',
+                                'Gif动图大全@https://www.aigei.com/lib/gif/',
+                                '校徽矢量图大全@https://www.urongda.com/',
+                                '80电子书@https://txt80.cc/',
+                                '畅读网@https://nicefread.cn/',
+                                'Z-Library@https://zh.17760704.ru/',
+                                '哲风壁纸@https://haowallpaper.com/?isSel=false&page=1',
+                                'win美化包@https://re.xcdream.com/pcmh/windowsthemes',
+                                '千库网@https://588ku.com/so/shuqianye/'
                             ]
                         },
                         {
@@ -78,43 +72,33 @@
                             moduleName: 'AI相关',
                             parts:[
                                 'picsart@https://picsart.com/create',
+                                'AI网站导航@https://www.dongaigc.com/nav'
+                             
                             ]
                         }, 
                         {
                             moduleId: 'resource-nav',
-                            moduleName: '资源导航',
+                            moduleName: 'IT导航',
                             parts:[
-                                '千库网@https://588ku.com/so/shuqianye/',
+                                '亚马逊云服务@https://eu-north-1.signin.aws.amazon.com/',
                                 '胖虎的工具箱@https://www.955code.com/',
-                                'JDK11下载@https://blog.lupf.cn/articles/2022/02/24/1645713619397.html#toc_h2_17',
-                                '各操作系统包@https://pkgs.org/'
+                                'JDK下载@https://blog.lupf.cn/articles/2022/02/24/1645713619397.html#toc_h2_17',
+                                '各操作系统包@https://pkgs.org/',
+                                'NPM packages@https://www.npmjs.com/settings/mgang/packages',
+                                'DockerHub@https://hub.docker.com/'
                             ]
                         },
                         {
                             moduleId: 'front-ui',
-                            moduleName: '前端UI库',
+                            moduleName: '前端相关',
                             parts:[
-                                'Layui@hhttps://layui.gitee.io/v2/',
-                                'heyui@https://www.heyui.top/',
-                                '热门前端@https://mg.meiflower.top/skill/front/all'
-                            ]
-                        },
-                        {
-                            moduleId: 'cross-sale',
-                            moduleName: '跨境电商运营',
-                            parts:[
-                                '速卖通@https://gsp.aliexpress.com/',
-                                '17Track@https://www.17track.net/zh-cn'
-                            ]
-                        },
-                        {
-                            moduleId: 'code-manage',
-                            moduleName: '代码托管',
-                            parts:[
-                                'Gitee@https://gitee.com/mgang',
-                                'Github@https://github.com/mg0324',
-                                'NPM packages@https://www.npmjs.com/settings/mgang/packages',
-                                'DockerHub@https://hub.docker.com/'
+                                'Vercel@https://vercel.com/',
+                                'Heyui@https://www.heyui.top/',
+                                'Vlink@https://vlink.cc/admin/make',
+                                'Material Design Icons@https://materialdesignicons.com/cdn/1.6.50-dev/',
+                                'BootCDN@https://www.bootcdn.cn/all/',
+                                'Docsify@https://docsify.js.org/#/zh-cn/',
+                                'favicon网站图标获取@https://favicon.im/zh'
                             ]
                         },
                         {
@@ -151,47 +135,14 @@
                         },
                         {
                             moduleId: 'rspb',
-                            moduleName: '树莓派',
-                            parts:['树莓派操作系统@https://www.raspberrypi.com/software/operating-systems/']
-                        },
-                        {
-                            moduleId: 'doc-about',
-                            moduleName: '文档相关',
+                            moduleName: '嵌入式',
                             parts:[
-                                'python-selenium3@https://python-selenium-zh.readthedocs.io/zh_CN/latest/',
-                                'python-argparse@https://docs.python.org/zh-cn/3/library/argparse.html#',
-                                'python-random@http://study.yali.edu.cn/pythonhelp/library/random.html',
-                                'giscus app@https://giscus.app/zh-CN'
-                            ]
-                        },
-                        {
-                            moduleId: 'my-res',
-                            moduleName: '我的资源',
-                            parts:[
-                                '我的蓝奏云@https://pc.woozooo.com/mydisk.php',
-                                '七牛云oss@https://portal.qiniu.com/kodo/bucket/resource-v2?bucketName=mango',
-                                '百度网盘@https://pan.baidu.com/',
-                                '芒果网盘@http://disk.meiflower.top/'
-                            ]
-                        },
-                        {
-                            moduleId: 'sol-thing',
-                            moduleName: '社会事宜',
-                            parts:[
-                                '广东交通局@https://gab.122.gov.cn/m/login',
-                                '灵活就业事项@https://www.gdzwfw.gov.cn/portal/v2/search?region=440300&keyword=%E7%81%B5%E6%B4%BB%E5%B0%B1%E4%B8%9A&areaCode=440300&departmentCode=&onlyCorrespondingLevel=0&type=',
-                                '深圳市公安局业务@https://msjw.ga.sz.gov.cn/?serviceType=1'
-                            ]
-                        },
-                        {
-                            moduleId: 'yl-res',
-                            moduleName: '娱乐资源',
-                            parts:[
-                                '免费mp3@https://music.y444.cn/#/',
+                                '树莓派操作系统@https://www.raspberrypi.com/software/operating-systems/',
+                                'Image Converter — LVGL@https://www.raspberrypi.com/software/operating-systems/'
+
                             ]
                         }
-                        
-
+    
                     ]
                 };
             },
