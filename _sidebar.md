@@ -1,9 +1,16 @@
 - 首页
   - [主页](README.md)
 - 技术教程
-  - [Clash Verge 404 解决](clash-verge-404.md)
-  - [Docsify 搭建博客](Docsify学习笔记.md)
-  - [Ai心理健康助手](前端实训项目.md)
-  - [Ubuntu网络适配器](Ubuntu网络适配器.md)
+  - 前后端开发
+    - [Docsify入门](docs/Docsify学习笔记.md)
+  - 嵌入式开发
+    - [Docsify入门](docs/Docsify学习笔记.md)
+  - 网络编程
+    - [Ubuntu网络适配器](docs/Ubuntu网络适配器.md)
+    - [HackingTools入门](docs/Ubuntu安装hackingtool.md)
+  - AI学习
+    - [Ai心理健康助手](docs/AI心理健康系统.md)
+  - 软件应用
+    - [ClashVerge-404](docs/Clash404.md)
 - 工具导航
-  - [工具导航](nav.md)
+  - [工具导航](assets/tool.md)
