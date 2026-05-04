@@ -131,7 +131,7 @@
 
 ## 集成现成插件大全
 
-1. docsify 主题 <br>
+### 1. docsify 主题 <br>
 > https://jhildenbiddle.github.io/docsify-themeable/#/themes
 
 ```css
@@ -140,7 +140,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-default.css">
 ```
 
-2. docisfy 返回顶部 <br>
+### 2. docisfy 返回顶部 <br>
 > https://github.com/Sumsung524/docsify-backTop
 
 ```js
@@ -161,7 +161,7 @@ docsifyBackTop = {
     };
 </script>
 ```
-3. docisfy 图片缩放 <br>
+### 3. docisfy 图片缩放 <br>
 
 ```js
 <!-- jsDelivr -->
@@ -171,7 +171,7 @@ docsifyBackTop = {
 <script src="node_modules/medium-zoom/dist/medium-zoom.min.js"></script>
 ```
 
-4. docsify 字数统计 <br>
+### 4. docsify 字数统计 <br>
 > https://github.com/827652549/docsify-count
 
 ```js
@@ -200,7 +200,7 @@ window.$docsify = {
 }
 ```
 
-5. docsify 代码复制 <br>
+### 5. docsify 代码复制 <br>
 <mark>**该插件可能会与其他插件冲突,请优先放在js部分的靠前位置,否则无法生效**</mark>
 > https://github.com/jperasmus/docsify-copy-code
 
@@ -221,7 +221,7 @@ window.$docsify = {
 }
 ```
 
-6. docsify Tabs选项卡 <br>
+### 6. docsify Tabs选项卡 <br>
    <mark>**该插件可能会与其他插件冲突,请优先放在js部分的靠前位置,否则无法生效**</mark>
 > https://github.com/jhildenbiddle/docsify-tabs
 
@@ -256,7 +256,7 @@ window.$docsify = {
 内容2
 <!-- tabs:end -->
 ```
-7. docsify 文章提示Alert <br>
+### 7. docsify 文章提示Alert <br>
 > https://github.com/fzankl/docsify-plugin-flexible-alerts
 
 ```js
@@ -285,7 +285,7 @@ window.$docsify = {
 > An  alert of type 'warning' using global style 'callout'
 ```
 
-8. docsify 最近更新时间 <br>
+### 8. docsify 最近更新时间 <br>
 > https://github.com/pfeak/docsify-updated
 
 ```js
@@ -302,7 +302,7 @@ window.$docsify = {
 };
 ```
 
-9. docsify 阅读进度条 <br>
+### 9. docsify 阅读进度条 <br>
     <mark>**该插件会与自带进度条的主题冲突,请按需使用**</mark>
 > https://github.com/HerbertHe/docsify-progress
 
@@ -320,7 +320,7 @@ window.$docsify = {
 }
 ```
 
-10. docsify 百度统计  <br>
+### 10. docsify 百度统计  <br>
 > https://github.com/youngfish42/note/commit/4e26e94586b05e959d9b4df7923f2c14889531cd
 > https://tongji.baidu.com/main/setting/10000716004/home/site/index
 
@@ -340,7 +340,7 @@ window.$docsify = {
 </script>
 ```
 
-11. docsify plantuml画图 <br>
+### 11. docsify plantuml画图 <br>
 > https://github.com/imyelo/docsify-plantuml
 > https://plantuml.com/zh/
 
@@ -361,7 +361,7 @@ window.$docsify = {
 // 语法浏览：https://plantuml.com/zh/
 ```
 
-12. docsify Toc插件 <br>
+### 12. docsify Toc插件 <br>
 > https://github.com/justintien/docsify-plugin-toc
 
 ```js
@@ -384,7 +384,7 @@ window.$docsify = {
 </script>
 ```
 
-13. docsify 手风琴 <br>
+### 13. docsify 手风琴 <br>
 > https://github.com/isaozler/docsify-accordion
 
 ```js
@@ -404,7 +404,7 @@ window.$docsify = {
 答案2
 ```
 
-14. docsify 全文搜索 <br>
+### 14. docsify 全文搜索 <br>
 > https://docsify.js.org/#/zh-cn/plugins
 
 ```js
@@ -417,14 +417,13 @@ search: 'auto',
 
 
 
-1.   docsify 在线笔记转PDF <br>
+### 15. docsify 在线笔记转PDF <br>
 > https://github.com/meff34/docsify-to-pdf-converter
 
 > [!TIP] 需要Node.js环境
 > [详情请查看官方文档](https://github.com/meff34/docsify-to-pdf-converter)
 
-
-17.  docsify 明暗主题切换 <br>
+### 16. docsify 明暗主题切换 <br>
 > https://github.com/markz-demo/docsify-dark-switch
 
 ```js
@@ -456,7 +455,7 @@ window.$docsify = {
 </script>
 ```
 
-18. docsify 文档分页 <br>
+### 17. docsify 文档分页 <br>
 > https://github.com/imyelo/docsify-pagination?tab=readme-ov-file#readme
 
 ```js
@@ -478,7 +477,7 @@ window.$docsify = {
 }
 ```
 
-19. docsify 顶部横幅 <br>
+### 18. docsify 顶部横幅 <br>
 > https://github.com/Plugin-contrib/docsify-plugin/tree/master/packages/docsify-top-banner-plugin
 
 ```js
@@ -502,6 +501,19 @@ window.$docsify = {
         fontSize: '14px'// 文本大小
   },
 }
+
+```
+### 19. docsify PDF在线预览 <br>
+> https://github.com/Plugin-contrib/docsify-plugin/tree/master/packages/docsify-pdf-preview-plugin
+
+```js
+<!-- Body -->
+<script src="https://cdn.jsdelivr.net/npm/docsify-pdf-preview-plugin@latest/dist/index.js"></script>
+
+<!-- 配置 -->
+``` pdf
+./img/redeme.pdf
+>```
 
 ```
 

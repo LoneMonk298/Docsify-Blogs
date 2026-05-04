@@ -1,10 +1,6 @@
 - 首页
   - [主页](README.md)
 - 技术教程
-  - 前后端开发
-    - [Docsify入门](docs/Docsify学习笔记.md)
-  - 嵌入式开发
-    - [Docsify入门](docs/Docsify学习笔记.md)
   - 网络编程
     - [Ubuntu网络适配器](docs/Ubuntu网络适配器.md)
     - [HackingTools入门](docs/Ubuntu安装hackingtool.md)
@@ -12,5 +8,6 @@
     - [Ai心理健康助手](docs/AI心理健康系统.md)
   - 软件应用
     - [ClashVerge-404](docs/Clash404.md)
+    - [Docsify入门](docs/Docsify学习笔记.md)
 - 工具导航
   - [工具导航](assets/tool.md)
