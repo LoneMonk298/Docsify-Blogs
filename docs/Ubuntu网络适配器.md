@@ -75,6 +75,16 @@
 > sudo apt-get remove vim-common <br>
 > sudo apt-get install vim
 
+以及共享文件夹经常出现重启挂载失败问题，我们可以通过编写脚本的方式解决，之后每次重启虚拟机都会自动执行。
+> sudo vim /etc/rc.local
+> // 在打开的文件中添加以下内容
+> #!/bin/sh -e
+> sudo vmhgfs-fuse .host:/ /mnt/hgfs -o nonempty -o allow_other
+> // 保存文件添加执行权限
+> sudo chmod +x /etc/rc.local
+> // 重启虚拟机
+> sudo reboot
+
   ``` bash
   //  进入配置编辑页,示例：
  network:
