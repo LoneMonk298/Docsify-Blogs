@@ -9,5 +9,6 @@
   - 软件应用
     - [ClashVerge-404](docs/Clash404.md)
     - [Docsify入门](docs/Docsify学习笔记.md)
+    - [MySQL密码修改](docs/MySQL密码修改.md)
 - 工具导航
   - [工具导航](assets/tool.md)
