@@ -10,7 +10,7 @@ Clash Verge 启动配置报错 failed to put configs with status 404？本文带
 
 > failed to put configs with status 404
 
-![alt text](./img/1.png )
+![alt text](../img/1.png )
 
 导致配置无法推送、代理功能失效。
 
@@ -39,7 +39,7 @@ Clash Verge 启动配置报错 failed to put configs with status 404？本文带
   > java.exe &nbsp;&nbsp; 8680 Services &nbsp;&nbsp; 0 &nbsp;&nbsp; 162,148,K
 
 3. 根本原因分析 <br>
-![alt text](./img/4.png) <br>
+![alt text](../img/4.png) <br>
 当我们进行查看Clash Verge 配置文件中设置了外部控制器端口时，我们能够观测到这行配置命令：
     > external-controller: 127.0.0.1:9090
 
@@ -51,16 +51,16 @@ Clash Verge 启动配置报错 failed to put configs with status 404？本文带
 #### 方案一：修改 Clash Verge 外部控制器端口（推荐）
 
 1. 打开Clash Verge -> 设置 -> 点击应用目录 <br>
- ![alt text](./img/image.png)
+ ![alt text](../img/image.png)
 
 2. 在目录页点击Config.yaml使用记事本打开 <br>
- ![alt text](./img/3.png)
+ ![alt text](../img/3.png)
 
 3. 修改9090为9091或其它未占用的端口 <br>
- ![alt text](./img/4.png)
+ ![alt text](../img/4.png)
 
 4. 保存文件并重启Clash Verge <br>
- ![alt text](./img/5.png)
+ ![alt text](../img/5.png)
 
 #### 方案二：修改Java服务端口
 
