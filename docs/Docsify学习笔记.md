@@ -537,7 +537,7 @@ window.$docsify = {
 
    上传后的目录如下： <br>
 
-   ![alt text](./img/8-1.png) <br>
+   ![alt text](../img/8-1.png) <br>
    
 
 6. 通过GitHub Pages进行托管，点击设置，下滑选择Pages进行配置<br>

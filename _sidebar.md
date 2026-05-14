@@ -4,7 +4,7 @@
   - 网络编程
     - [Ubuntu网络适配器](docs/Ubuntu网络适配器.md)
     - [HackingTools入门](docs/Ubuntu安装hackingtool.md)
-    - [小熊派](docs/小熊派学习.md)
+    - [鸿蒙小熊派](docs/小熊派学习.md)
   - AI学习
     - [Ai心理健康助手](docs/AI心理健康系统.md)
   - 软件应用
