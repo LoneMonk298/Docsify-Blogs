@@ -12,5 +12,6 @@
     - [ClashVerge-404](docs/Clash404.md)
     - [Docsify入门](docs/Docsify学习笔记.md)
     - [MySQL密码修改](docs/MySQL密码修改.md)
+    - [Playnite使用指北](docs/Playnite使用指北.md)
 - 工具导航
   - [工具导航](assets/tool.md)
