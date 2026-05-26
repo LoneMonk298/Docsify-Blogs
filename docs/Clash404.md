@@ -21,7 +21,7 @@ Clash Verge 启动配置报错 failed to put configs with status 404？本文带
   - 在打开的窗口内输入命令
   > netstat -ano | findstr :9090
 
- <mark>clash verge的配置文件默认监听端口为9090</mark>
+ <mark>clash verge的配置文件外部控制端口默认监听9090</mark>
 
 
 结果：

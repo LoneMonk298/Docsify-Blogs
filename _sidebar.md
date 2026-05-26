@@ -10,6 +10,7 @@
     - [Ai心理健康助手](docs/AI心理健康系统.md)
   - 软件应用
     - [ClashVerge-404](docs/Clash404.md)
+    - [Codex-UWP](docs/Codex_UWP策略.md)
     - [Docsify入门](docs/Docsify学习笔记.md)
     - [MySQL密码修改](docs/MySQL密码修改.md)
     - [Playnite使用指北](docs/Playnite使用指北.md)
