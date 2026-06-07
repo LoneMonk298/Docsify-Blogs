@@ -1,24 +1,25 @@
-# AI心理健康助手
-
-## 项目简介
+# AI心理健康系统技术记录
+## 1. 项目简介
 
 + 这是一个用来做什么的项目？ +
   
-这是一个结合前沿AI技术和心理学的健康助手，通过AI技术帮助你的心理健康，为你提供情绪价值。
+这是一个结合前沿AI技术和心理学的健康助手，通过AI技术帮助你的心理健康，目标为你提供情绪价值。
 
 + 所用的技术栈有哪些？ +
   
-前端语言：HTML、CSS、JavaScript <br>
+前端语言：HTML、CSS、TypeScript <br>
 前端框架：Vue.js <br>
+运行环境：Node.js v24.12.0 <br>
 路由工具：Vue Router <br>
 构建工具：Vite <br>
 UI框架：Element Plus 、Vuetify、Bootstrap、JQuery<br>
 后端语言：Java、Python<br>
+jdk版本：21<br>
 后端框架：Spring Boot <br>
-后端服务器：Node.js <br>
+后端服务器：Nginx <br>
 数据缓存工具：Redis <br>
 数据库：MySQL <br>
-部署工具：Vercel <br>
+前端部署工具：Vercel <br>
 Web服务器：Nginx <br>
 API测试工具：Postman <br>
 API设计文档：Rest API<br>
@@ -27,11 +28,13 @@ API设计文档：Rest API<br>
 仓库托管工具：GitHub <br>
 代码编辑器：VSCode、Trae、IDEA<br>
 操作系统：Windows 10、Ubuntu Linux <br>
-云服务器：AWS EC2<br>
+云服务器：Ubuntu Linux<br>
 AI服务运行框架：Ollama <br>
+RAG服务运行框架：Langchain<br>
+部署工具：Docker <br>
 
 
-## 环境搭建 
+### 1.1 环境搭建 
 
 1. Node.js的安装与配置（使用版本：v24.12.0）
    
@@ -70,15 +73,17 @@ nvm list available
 // 4. 安装
 nvm install 24.12.0
 
-// 5. 切换使用
+// 5. 查看已安装版本
+nvm list
+
+// 6. 切换使用指定版本
 nvm use 24.12.0
+
+// 7. 检查是否成功
+node -v
 ```
 
-1. 编辑器的选择
-   - VSCode：老牌编辑器，建议集成AI插件，比如windsurf、Claude等
-   - Trae:自带AI插件，地址：https://www.trae.cn/
-  
-2. 脚手架资料，根据文档搭建开发环境： <br>
+1. 脚手架资料，根据文档搭建开发环境： <br>
    > https://vitejs.cn/vite3-cn/guide/
 
    搭建Vite项目： <br>
@@ -87,14 +92,5 @@ nvm use 24.12.0
    下载依赖包并在main.js中引入： <br>
    > npm install element-plus --save
 
-```bash
-import { createApp } from 'vue'
-import ElementPlus from 'element-plus'
-import 'element-plus/dist/index.css'
-import App from './App.vue'
 
-const app = createApp(App)
-app.use(ElementPlus)
-app.mount('#app')
-```
 

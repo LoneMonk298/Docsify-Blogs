@@ -14,5 +14,6 @@
     - [Docsify入门](docs/Docsify学习笔记.md)
     - [MySQL密码修改](docs/MySQL密码修改.md)
     - [Playnite使用指北](docs/Playnite使用指北.md)
+    - [Emmet插件常用语法](docs/Emmet实用语法.md)
 - 工具导航
   - [工具导航](assets/tool.md)
